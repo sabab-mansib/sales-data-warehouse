@@ -1,0 +1,7 @@
+CREATE TABLE dim_customer (Customer_ID INT PRIMARY KEY,C_Name VARCHAR(100),City VARCHAR(100));
+
+CREATE TABLE dim_product (Product_ID INT PRIMARY KEY,P_Name VARCHAR(100),Category VARCHAR(100),Price DECIMAL(10,2));
+
+CREATE TABLE dim_time (Time_ID INT AUTO_INCREMENT PRIMARY KEY,Order_Date DATE,Month INT,Year INT);
+
+CREATE TABLE fact_sales (Sale_ID INT AUTO_INCREMENT PRIMARY KEY,Customer_ID INT,Product_ID INT,Time_ID INT,Quantity INT,Total_Amount DECIMAL(10,2));
